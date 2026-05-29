@@ -46,19 +46,19 @@ directorios
 ## Ejecucion
 
 ‘‘‘ bash
-# Navegar por el sistema
+## Navegar por el sistema
 cd /
 ls - la
 pwd
 
-# Explorar con tree
+## Explorar con tree
 tree -L 1 /
 
-# Probar ejemplos
-# ( copiar comandos de ejemplos - practicos . md )
+## Probar ejemplos
+##(copiar comandos de ejemplos - practicos . md )
 ‘‘‘
 
 ## Recursos
-- Man pages : ‘ man ls ‘ , ‘ man bash ‘
+- Man pages : ‘man ls ‘ , ‘ man bash ‘
 - FHS ( Filesystem Hierarchy Standard )
-- GitHub: https ://github.com/TU-USUARIO/linux-lab
+- GitHub: https://github.com/michaelplaza-bit/linux-lab
