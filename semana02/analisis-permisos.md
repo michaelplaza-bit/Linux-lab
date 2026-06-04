@@ -1,7 +1,7 @@
 # Analisis de Permisos Aplicados
 ## Resumen de Permisos
 | Tipo        |   Permisos         | Octal        | Justificacion                      |
-| - - - - -- -| - - - - - - - - - -| - - - - - - -| - - - - - - - - - - - - - - - - - -|
+|-------------|--------------------|--------------|------------------------------------|
 | Documentos  | rw-r--r--          | 644          | Solo el dueno modifica ,otros leen |
 | Imagenes    | rw-r--r--          | 644          | Archivos de solo lecturapara otros |
 | Scripts     | rwxr-xr-x          | 755          | Deben ser ejecutables              |
