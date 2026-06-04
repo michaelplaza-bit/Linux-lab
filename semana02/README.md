@@ -83,24 +83,24 @@ Ver ‘ analisis - permisos . md ‘ para detalles .
 - [ x ] Analisis de permisos detallado
 ## Estructura Final
 ‘‘‘
-organized /
-            documents / (644)
-                  documento_1 . txt
-                  notas_1 . md
-                  reporte_1 . doc
-            images/       (644) 
-                   foto_1 . jpg
-                   screenshot_1 . png
-            scripts/      (755)
-                   script_1 . sh
-                   utilidad_1 . py
-            config/      (644)
-                   config_1 . conf
-                   settings_1 . json
-            logs/        (644)
-                   sistema_1 . log
-                   app_1 . log
-            temp/
+organized/
+documents/ (644)
+    documento_1.txt
+    notas_1.md
+    reporte_1.doc
+images/ (644)
+    foto_1.jpg
+    screenshot_1.png
+scripts/ (755)
+    script_1.sh
+    utilidad_1.py
+config/ (644)
+    config_1.conf
+    settings_1.json
+logs/ (644)
+    sistema_1.log
+    app_1.log
+temp/ (755)  
 ‘‘‘
 
 ## Notas
