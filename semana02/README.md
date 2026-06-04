@@ -61,8 +61,9 @@ ls - lR organized /
 - ‘ archivo [1 -5]. sh ‘ - Rangos
 - ‘{a ,b , c } ‘ - Expansion
 ## Permisos Aplicados
+
 | Tipo        | Permisos           | Explicacion              |
-| - - - - -  -| - - - - - - - - - -| - - - - - - - - - - - - -|
+|-------------|--------------------|--------------------------|
 | Documentos  | 644                | Solo owner escribe       |
 | Imagenes    | 644                | Solo owner escribe       |
 | Scripts     | 755                | Ejecutables por todos    |
