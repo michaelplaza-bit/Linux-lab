@@ -22,6 +22,7 @@ mv *.doc organized/documents/  2>/dev/null || true
 echo "Documentos organizados"
 
 # Organizar imagenes
+
 echo "[3/4] Organizando imagenes..."
 
 mv *.jpg organized/images/ 2>/dev/null || true
@@ -29,3 +30,24 @@ mv *.png organized/images/ 2>/dev/null || true
 mv *.gif organized/images/ 2>/dev/null || true
 
 echo "Imagenes organizadas"
+
+# Organizar scripts
+
+echo "Organizando scripts..."
+
+mv *.sh organized/scripts/ 2>/dev/null || true
+mv *.py organized/scripts/ 2>/dev/null || true
+
+# Organizar configuraciones
+
+echo "Organizando configuraciones..."
+
+mv *.conf organized/config/ 2>/dev/null || true
+mv *.json organized/config/ 2>/dev/null || true
+mv *.xml organized/config/ 2>/dev/null  || true
+
+# Organizar logs
+
+echo "Organizando logs..."
+
+mv *.log organized/logs/ 2>/dev/null || true
