@@ -124,3 +124,14 @@ case "$MODO" in
         seccion_memoria
         ;;
 esac
+# === Seccionn 4: Disco ===
+seccion_disco () {
+    echo "[ USO DE DISCO ]"
+    echo " $SEPARADOR_SEC "
+    printf " % -20s %6s %6s %6s %5s\n" \
+         " Participacion" "Total" "Usado" "Libre" "Uso%"
+    echo " $( printf ’%.0s- ’ {1..48}) "
+    df -h | grep -v "^ tmpfs \|^ udev \|^ Filesystem " | \
+        awk ’{ printf " % -20s %6s %6s %6s %5s\n" , $6 , $2 ,$3 , $4 , $5}’
+    echo ""
+}
