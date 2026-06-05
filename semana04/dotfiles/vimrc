@@ -1,0 +1,53 @@
+" ~/. vimrc - Configuraci ´o n de vim
+" Semana 4: Editores y Dotfiles
+" ---- B ´a sico ----
+set nocompatible " No compatible con vi antiguo
+syntax on " Resaltado de sintaxis
+set encoding = utf -8 " Codificaci ´o n de caracteres
+" ---- Apariencia ----
+set number " Mostrar n ´u meros de l ´ı nea
+set cursorline " Resaltar la l ´ı nea actual
+set showmode " Mostrar el modo actual en la
+barra
+set ruler " Mostrar posici ´o n del cursor
+set laststatus =2 " Barra de estado siempre visible
+" ---- Indentaci ´o n ----
+set tabstop =4 " Tab equivale a 4 espacios
+set shiftwidth =4 " Indentaci ´o n autom ´a tica : 4
+espacios
+set expandtab " Insertar espacios en lugar de tab
+set autoindent " Conservar la indentaci ´o n de la l ´ı
+nea anterior
+set smartindent " Indentaci ´o n inteligente para c ´o
+digo
+" ---- B ´u squeda ----
+set incsearch " Buscar mientras se escribe
+set hlsearch " Resaltar resultados de b ´u squeda
+set ignorecase " B ´u squeda insensible a may ´u sculas /
+min ´u sculas
+set smartcase " ... excepto si hay may ´u sculas en
+el patr ´o n
+" ---- Comportamiento ----
+set backspace = indent , eol , start " Backspace funciona en
+todo
+set wrap " Envolver l ´ı neas largas
+set linebreak " Cortar en palabras , no en
+caracteres
+set scrolloff =5 " Mantener 5 l ´ı neas de
+contexto al hacer scroll
+set wildmenu " Autocompletado mejorado
+de comandos
+" ---- Archivos ----
+set nobackup " No crear archivos . bak
+set noswapfile " No crear archivos . swp
+" ---- Mapeos personalizados ----
+" jj en modo Insert equivale a Esc
+inoremap jj <Esc>
+" Guardar con Ctrl + S ( requiere : stty - ixon en . bashrc )
+nnoremap <C-s> :w <CR>
+inoremap <C-s> <Esc>:w<CR>a
+" Limpiar el resaltado de b ´u squeda con Esc en modo Normal
+nnoremap <Esc > : nohlsearch<CR>
+" Mover l ´ı neas completas con Alt + j y Alt + k
+nnoremap <A-j> : m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
