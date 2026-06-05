@@ -1,0 +1,4 @@
+[2026-06-05 20:17:56] [INFO   ] === backup-check.sh v1.0.0 - Inicio ===
+[2026-06-05 20:17:56] [INFO   ] Directorio objetivo: /home/michael/backup-prueba
+[2026-06-05 20:17:56] [INFO   ] Verificando directorio: /home/michael/backup-prueba
+[2026-06-05 20:17:56] [OK     ] Directorio accesible: /home/michael/backup-prueba
