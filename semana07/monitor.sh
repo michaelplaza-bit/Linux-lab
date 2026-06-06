@@ -133,3 +133,29 @@ while true; do
     sleep "$INTERVALO"
 
 done
+
+resumen_log() {
+    echo ""
+    echo "========================================="
+    echo "          RESUMEN DE LA SESIÓN"
+    echo "========================================="
+
+    local total alertas
+
+    total=$(grep -c "\[INFO\]" "$LOGFILE" 2>/dev/null || echo 0)
+    alertas=$(grep -c "\[ALERTA\]" "$LOGFILE" 2>/dev/null || echo 0)
+
+    printf "%-25s %d\n" "Comprobaciones totales:" "$total"
+    printf "%-25s %d\n" "Alertas emitidas:" "$alertas"
+
+    echo ""
+    echo "Últimas entradas:"
+
+    # Leer el log con while y mostrar las últimas 3 líneas
+    tail -3 "$LOGFILE" | while IFS= read -r linea; do
+        echo "$linea"
+    done
+
+    echo "========================================="
+}
+
