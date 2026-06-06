@@ -58,3 +58,33 @@ while [ $# -gt 0 ]; do
             ;;
     esac
 done
+
+# Retorna el porcentaje de uso de la partición raíz
+uso_disco() {
+    df / | awk 'NR==2 { gsub(/%/, "", $5); print $5 }'
+}
+
+# Retorna el porcentaje de RAM usada
+uso_ram() {
+    free | awk '/^Mem:/ {
+        printf "%.0f", ($3 / $2) * 100
+    }'
+}
+
+# Retorna el load average del último minuto
+carga_cpu() {
+    uptime | awk -F'load average:' '{ print $2 }' \
+        | awk '{ gsub(/,/, "", $1); print $1 }'
+}
+
+# Escribe al log y a pantalla con marca de tiempo
+registrar() {
+    local nivel="$1"
+    local mensaje="$2"
+    local ts
+
+    ts=$(date '+%Y-%m-%d %H:%M:%S')
+
+    printf "[%s] [%-7s] %s\n" \
+        "$ts" "$nivel" "$mensaje" | tee -a "$LOGFILE"
+}
